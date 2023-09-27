@@ -1,9 +1,9 @@
-// ==UserScript==
-// @name         New Userscript
+// ==Hour Script==
+// @name         Rust Hour Summary
 // @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  try to take over the world!
-// @author       You
+// @version      1.2
+// @description  Provides Hour Summary for accounts.
+// @author       Hexay
 // @match        https://www.battlemetrics.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=battlemetrics.com
 // @grant        none
@@ -83,10 +83,15 @@
     let userID = document.URL.split("/")[4].split("?")[0];
     getData(userID);
 
-    document.addEventListener('click', function () {
-        let userID = document.URL.split("/")[4].split("?")[0];
+    var arr = []
+    document.addEventListener('mousemove', function () {
         if (document.URL.includes("https://www.battlemetrics.com/players/")) {
-            getData(userID);
+            let userID = document.URL.split("/")[4].split("?")[0];
+            if (!arr.includes(userID)) {
+                getData(userID);
+                arr.push(userID);
+            }
         }
     });
+
 })();
