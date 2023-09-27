@@ -1,9 +1,9 @@
-// ==Hour Script==
+// ==UserScript==
 // @name         Rust Hour Summary
 // @namespace    http://tampermonkey.net/
-// @version      1.2
-// @description  Provides Hour Summary for accounts.
-// @author       Hexay
+// @version      0.1
+// @description  try to take over the world!
+// @author       You
 // @match        https://www.battlemetrics.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=battlemetrics.com
 // @grant        none
@@ -92,6 +92,10 @@
                 arr.push(userID);
             }
         }
+    });
+
+    document.addEventListener("click", function () {
+        arr = []
     });
 
 })();
