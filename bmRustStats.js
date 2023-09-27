@@ -1,4 +1,4 @@
-// ==Rust Hour Summary==
+// ==UserScript==
 // @name         Rust Hour Summary
 // @namespace    http://tampermonkey.net/
 // @version      1.1
