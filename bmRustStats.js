@@ -49,13 +49,21 @@
         }
         var msg = "Total of "+hours.toFixed(2).toString()+" hours<br>";
         servers = sort(servers);
-        var le = max(servers.length-6, servers.length)
+        var le = Math.max(servers.length-6, -1)
         for (var i=servers.length-1; i > le; i = i - 1) {
             msg = msg + servers[i][0] + " " + servers[i][1].toFixed(2).toString() + "<br>";
         }
         console.log(servers)
-        document.getElementsByClassName("col-md-4")[2].remove();
-        document.getElementsByClassName("css-1217rdu")[0].innerText = "Player Stats:";
+
+        try {
+            document.getElementsByClassName("col-md-4")[2].remove();
+        } catch (error) {
+            console.log("Error:", error.message);
+        }
+
+        if ($('#css-1217rdu').length > 0) {
+            document.getElementsByClassName("css-1217rdu")[0].innerText = "Player Stats:";
+        }
         var statsClass = document.getElementsByClassName("collapse in")[0];
         statsClass.innerHTML = msg;
         statsClass.style.fontSize = "20px";
@@ -82,7 +90,9 @@
         return a.concat(sort(low), x, sort(high));
     }
 
-
+    var script = document.createElement('script');
+    script.src = 'https://code.jquery.com/jquery-3.6.3.min.js'; // Check https://jquery.com/ for the current version
+    document.getElementsByTagName('head')[0].appendChild(script);
 
     let userID = document.URL.split("/")[4].split("?")[0];
     getData(userID);
