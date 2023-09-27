@@ -49,7 +49,11 @@
         }
         var msg = "Total of "+hours.toFixed(2).toString()+" hours<br>";
         servers = sort(servers);
-        for (var i=servers.length-1; i > servers.length-6; i = i - 1) {
+        var le = servers.length-6
+        if (le < 0) {
+            le = servers.length
+        }
+        for (var i=servers.length-1; i > le; i = i - 1) {
             msg = msg + servers[i][0] + " " + servers[i][1].toFixed(2).toString() + "<br>";
         }
         console.log(servers)
