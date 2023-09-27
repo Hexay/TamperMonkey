@@ -1,9 +1,9 @@
-// ==UserScript==
+// ==Rust Hour Summary==
 // @name         Rust Hour Summary
 // @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  try to take over the world!
-// @author       You
+// @version      1.1
+// @description  Find all the information about your enemies!
+// @author       Hexay
 // @match        https://www.battlemetrics.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=battlemetrics.com
 // @grant        none
@@ -80,10 +80,14 @@
         let a = []
         return a.concat(sort(low), x, sort(high));
     }
+
+
+
     let userID = document.URL.split("/")[4].split("?")[0];
     getData(userID);
 
     var arr = []
+
     document.addEventListener('mousemove', function () {
         if (document.URL.includes("https://www.battlemetrics.com/players/")) {
             let userID = document.URL.split("/")[4].split("?")[0];
@@ -96,6 +100,14 @@
 
     document.addEventListener("click", function () {
         arr = []
+        if (document.URL.includes("https://www.battlemetrics.com/players/")) {
+            let userID = document.URL.split("/")[4].split("?")[0];
+            if (!arr.includes(userID)) {
+                getData(userID);
+                arr.push(userID);
+            }
+        }
+
     });
 
 })();
