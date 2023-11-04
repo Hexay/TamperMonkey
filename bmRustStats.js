@@ -57,6 +57,7 @@
 
         try {
             document.getElementsByClassName("col-md-4")[2].remove();
+            document.querySelector("#PlayerPage > div:nth-child(2) > div:nth-child(2) > div > h4").remove();
         } catch (error) {
             console.log("Error:", error.message);
         }
