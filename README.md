@@ -1,12 +1,12 @@
-![image](https://github.com/Hexay/TamperMonkey/assets/97907668/d9c6e188-eed3-4a5e-a82d-2456b7df4abd)
+![image](https://github.com/Hexay/TamperMonkey/assets/97907668/904146fd-04a9-42e4-9802-f94a3e0d481e)
 # Rust Hour Summary
 
 Make sure you have Tamper Monkey installed ([Download for Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo))  
 
 # How to install the script
+![image](https://github.com/Hexay/TamperMonkey/assets/97907668/d9c6e188-eed3-4a5e-a82d-2456b7df4abd)
 ![image](https://github.com/Hexay/TamperMonkey/assets/97907668/c94a4bb5-2c17-4630-9d78-76963fd6f143)
 Paste the code into that file and ctrl + s to save.
-![image](https://github.com/Hexay/TamperMonkey/assets/97907668/904146fd-04a9-42e4-9802-f94a3e0d481e)
 
 # How to find players battlemetrics
 Go to the server you are playing
