@@ -70,6 +70,13 @@
         statsClass.style.fontSize = "20px";
         statsClass.style.width = "720px";
         statsClass.style.height = "250px";
+
+        var button = document.querySelector('.css-s8739t button');
+        var link = document.createElement('a');
+        link.href = "https://www.battlemetrics.com/rcon/players/"+userID+"/identifiers"
+        link.textContent = "Swap to Identifiers"
+        link.classList.add("css-18q9uva")
+        button.parentNode.replaceChild(link, button);
     }
 
     function sort(servers) {
@@ -121,5 +128,6 @@
         }
 
     });
+
 
 })();
